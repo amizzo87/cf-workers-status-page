@@ -80,7 +80,7 @@ monitors:
 
   - id: plex-izzo-one-qb
     name: qBittorrent
-    description: 'Torrent Downloader
+    description: 'Torrent Downloader'
     url: 'https://plex.izzo.one/qb'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
