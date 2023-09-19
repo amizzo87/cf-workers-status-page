@@ -1,7 +1,7 @@
 settings:
-  title: 'Plex Services Status Page'
-  url: 'https://check.izzo.one' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  title: 'Plex (and Adjacent) Services Status Page'
+  url: 'https://check.izzo.one/' # used for Slack messages
+  logo: plex-logo.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
