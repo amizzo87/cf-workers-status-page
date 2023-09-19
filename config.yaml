@@ -61,7 +61,7 @@ monitors:
     expectStatus: 200    
 
   - id: plex-izzo-one-sabnzbd
-    name: Sabndbz
+    name: Sabnzbd
     description: 'NZB Downloader'
     url: 'https://plex.izzo.one/sabnzbd'
     method: GET
