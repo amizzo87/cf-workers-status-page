@@ -1,5 +1,5 @@
 settings:
-  title: 'Anthony's Plex Services' Status Page'
+  title: 'Anthony\'s Plex Services\' Status Page'
   url: 'https://check.izzo.one/' # used for Slack messages
   logo: plex-logo.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
