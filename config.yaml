@@ -27,7 +27,7 @@ monitors:
   - id: plex-qnap # unique identifier
     name: QNAP
     description: 'Plex - QNAP' # default=empty
-    url: 'https://internal.izzo.one' # URL to fetch
+    url: 'https://internal.izzo.cloud' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
@@ -96,10 +96,10 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 200
 
-  - id: plex-izzo-one-deluge
+  - id: deluge-izzo-one
     name: Deluge
     description: 'Torrent Downloader'
-    url: 'https://plex.izzo.one/deluge'
+    url: 'https://deluge.izzo.one'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
