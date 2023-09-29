@@ -15,6 +15,24 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
+  - id: plex-master # unique identifier
+    name: Plex
+    description: 'Plex - Master' # default=empty
+    url: 'https://app.plex.tv' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: plex-qnap # unique identifier
+    name: QNAP
+    description: 'Plex - QNAP' # default=empty
+    url: 'https://internal.izzo.one' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true    
+    
   - id: plex-izzo-one-bazarr # unique identifier
     name: Bazarr
     description: 'Subtitle Downloader' # default=empty
@@ -36,7 +54,7 @@ monitors:
   - id: overseerr-izzo-one
     name: Overseerr
     description: 'Request Service for Plex'
-    url: 'https://overseerr.izzo.one/'
+    url: 'https://overseerr.izzo.one'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
@@ -70,13 +88,22 @@ monitors:
     expectStatus: 200    
 
   - id: plex-izzo-one-sonarr
-    name: Overseerr
+    name: Sonarr
     description: 'TV Show Downloader'
     url: 'https://plex.izzo.one/sonarr'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
     expectStatus: 200
+
+  - id: plex-izzo-one-deluge
+    name: Deluge
+    description: 'Torrent Downloader'
+    url: 'https://plex.izzo.one/deluge'
+    method: GET
+    followRedirect: true # should fetch follow redirects, default=false    
+    linkable: true # allows the title to be a link, default=true
+    expectStatus: 200    
 
   - id: plex-izzo-one-qb
     name: qBittorrent
@@ -85,4 +112,4 @@ monitors:
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200    
+    expectStatus: 200        
