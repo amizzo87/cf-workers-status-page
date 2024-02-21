@@ -24,7 +24,7 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true  
     
-  - id: plex-izzo-one-bazarr # unique identifier
+  - id: plex-izzo-app-bazarr # unique identifier
     name: Bazarr
     description: 'Subtitle Downloader' # default=empty
     url: 'https://plex.izzo.app/bazarr' # URL to fetch
@@ -33,7 +33,7 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: plex-izzo-one-lidarr
+  - id: plex-izzo-app-lidarr
     name: Lidarr
     description: 'Music Downloader'
     url: 'https://plex.izzo.app/lidarr'
@@ -42,16 +42,16 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
 
-  - id: overseerr-izzo-one
+  - id: overseerr-izzo-app
     name: Overseerr
     description: 'Request Service for Plex'
     url: 'https://overseerr.izzo.app'
     method: GET
+    expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200
 
-  - id: plex-izzo-one-prowlarr
+  - id: plex-izzo-app-prowlarr
     name: Prowlarr
     description: 'Indexer Manager'
     url: 'https://plex.izzo.app/prowlarr'
@@ -60,7 +60,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 401
 
-  - id: plex-izzo-one-radarr
+  - id: plex-izzo-app-radarr
     name: Radarr
     description: 'Movie Downloader'
     url: 'https://plex.izzo.app/radarr'
@@ -69,7 +69,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 401    
 
-  - id: plex-izzo-one-sabnzbd
+  - id: plex-izzo-app-sabnzbd
     name: Sabnzbd
     description: 'NZB Downloader'
     url: 'https://plex.izzo.app/sabnzbd'
@@ -78,7 +78,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 401    
 
-  - id: plex-izzo-one-sonarr
+  - id: plex-izzo-app-sonarr
     name: Sonarr
     description: 'TV Show Downloader'
     url: 'https://plex.izzo.app/sonarr'
@@ -87,7 +87,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 200
 
-  - id: deluge-izzo-one
+  - id: deluge-izzo-app
     name: Deluge
     description: 'Torrent Downloader'
     url: 'https://deluge.izzo.app'
@@ -96,7 +96,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 200    
 
-  - id: plex-izzo-one-qb
+  - id: qb-izzo-app
     name: qBittorrent
     description: 'Torrent Downloader'
     url: 'https://qb.izzo.app'
