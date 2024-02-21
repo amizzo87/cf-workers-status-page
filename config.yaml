@@ -85,7 +85,7 @@ monitors:
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200
+    expectStatus: 401
 
   - id: deluge-izzo-app
     name: Deluge
