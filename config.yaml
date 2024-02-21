@@ -1,6 +1,6 @@
 settings:
   title: "Anthony's Plex Services' Status Page"
-  url: 'https://check.izzo.one/' # used for Slack messages
+  url: 'https://check.izzo.app/' # used for Slack messages
   logo: plex-logo.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -27,25 +27,25 @@ monitors:
   - id: plex-izzo-one-bazarr # unique identifier
     name: Bazarr
     description: 'Subtitle Downloader' # default=empty
-    url: 'https://plex.izzo.one/bazarr' # URL to fetch
+    url: 'https://plex.izzo.app/bazarr' # URL to fetch
     method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
+    expectStatus: 401 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
   - id: plex-izzo-one-lidarr
     name: Lidarr
     description: 'Music Downloader'
-    url: 'https://plex.izzo.one/lidarr'
+    url: 'https://plex.izzo.app/lidarr'
     method: GET
-    expectStatus: 200
+    expectStatus: 401
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
 
   - id: overseerr-izzo-one
     name: Overseerr
     description: 'Request Service for Plex'
-    url: 'https://overseerr.izzo.one'
+    url: 'https://overseerr.izzo.app'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
@@ -54,34 +54,34 @@ monitors:
   - id: plex-izzo-one-prowlarr
     name: Prowlarr
     description: 'Indexer Manager'
-    url: 'https://plex.izzo.one/prowlarr'
+    url: 'https://plex.izzo.app/prowlarr'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200
+    expectStatus: 401
 
   - id: plex-izzo-one-radarr
     name: Radarr
     description: 'Movie Downloader'
-    url: 'https://plex.izzo.one/radarr'
+    url: 'https://plex.izzo.app/radarr'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200    
+    expectStatus: 401    
 
   - id: plex-izzo-one-sabnzbd
     name: Sabnzbd
     description: 'NZB Downloader'
-    url: 'https://plex.izzo.one/sabnzbd'
+    url: 'https://plex.izzo.app/sabnzbd'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200    
+    expectStatus: 401    
 
   - id: plex-izzo-one-sonarr
     name: Sonarr
     description: 'TV Show Downloader'
-    url: 'https://plex.izzo.one/sonarr'
+    url: 'https://plex.izzo.app/sonarr'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
@@ -90,7 +90,7 @@ monitors:
   - id: deluge-izzo-one
     name: Deluge
     description: 'Torrent Downloader'
-    url: 'https://deluge.izzo.one'
+    url: 'https://deluge.izzo.app'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
@@ -99,7 +99,7 @@ monitors:
   - id: plex-izzo-one-qb
     name: qBittorrent
     description: 'Torrent Downloader'
-    url: 'https://plex.izzo.one/qb'
+    url: 'https://qb.izzo.app'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
