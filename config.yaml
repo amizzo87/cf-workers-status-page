@@ -2,9 +2,8 @@ settings:
   title: "Anthony's Plex Services' Status Page"
   url: 'https://check.izzo.app/' # used for Slack messages
   logo: plex-logo.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
-
   allmonitorsOperational: 'All Systems Operational'
   notAllmonitorsOperational: 'Not All Systems Operational'
   monitorLabelOperational: 'Operational'
@@ -32,6 +31,15 @@ monitors:
     expectStatus: 401 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
+
+  - id: deluge-izzo-app
+    name: Deluge
+    description: 'Torrent Downloader'
+    url: 'https://deluge.izzo.app'
+    method: GET
+    followRedirect: true # should fetch follow redirects, default=false    
+    linkable: true # allows the title to be a link, default=true
+    expectStatus: 200    
 
   - id: plex-izzo-app-lidarr
     name: Lidarr
@@ -87,14 +95,14 @@ monitors:
     linkable: true # allows the title to be a link, default=true
     expectStatus: 401
 
-  - id: deluge-izzo-app
-    name: Deluge
-    description: 'Torrent Downloader'
-    url: 'https://deluge.izzo.app'
+  - id: tautulli
+    name: Tautulli
+    description: 'Plex Viewer Statistics'
+    url: 'https://tautulli.izzo.app'
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200    
+    expectStatus: 200   
 
   - id: qb-izzo-app
     name: qBittorrent
@@ -103,4 +111,4 @@ monitors:
     method: GET
     followRedirect: true # should fetch follow redirects, default=false    
     linkable: true # allows the title to be a link, default=true
-    expectStatus: 200        
+    expectStatus: 200    
